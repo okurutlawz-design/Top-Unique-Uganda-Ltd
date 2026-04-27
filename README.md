@@ -1,2 +1,911 @@
-# Top-Unique-Uganda-Ltd
-Top Unique Uganda Ltd is a fully registered Ugandan company specializing in providing professional cleaning and hygiene services to residential, commercial, industrial, and institutional clients.  Since our establishment in 2007.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Unique Uganda Ltd - A Culture of Excellence</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #4CAF50;
+            --dark-green: #2E7D32;
+            --light-green: #81C784;
+            --white: #ffffff;
+            --dark: #333333;
+            --gray: #f5f5f5;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-green);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            color: var(--white);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--white);
+            color: var(--primary-green);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--dark-green);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-green);
+            margin: 1rem auto;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--gray);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            color: var(--dark-green);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .stat-card i {
+            font-size: 3rem;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        .stat-card h4 {
+            font-size: 2rem;
+            color: var(--dark-green);
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid var(--primary-green);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            color: var(--dark-green);
+            margin-bottom: 1rem;
+        }
+
+        /* Team Section */
+        .team {
+            background: var(--gray);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .team-card .avatar {
+            width: 120px;
+            height: 120px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--white);
+        }
+
+        .team-card h3 {
+            color: var(--dark-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-card .position {
+            color: var(--primary-green);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Clients Section */
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .client-item {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .client-item i {
+            font-size: 2rem;
+            color: var(--primary-green);
+        }
+
+        /* Strengths Section */
+        .strengths {
+            background: linear-gradient(135deg, var(--dark-green), var(--primary-green));
+            color: var(--white);
+        }
+
+        .strengths .section-title {
+            color: var(--white);
+        }
+
+        .strengths .section-title::after {
+            background: var(--white);
+        }
+
+        .strengths-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .strength-item {
+            display: flex;
+            align-items: start;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+
+        .strength-item i {
+            font-size: 2rem;
+            color: var(--light-green);
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h3 {
+            color: var(--dark-green);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-detail i {
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            margin-top: 0.3rem;
+        }
+
+        .contact-form {
+            background: var(--gray);
+            padding: 2.5rem;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: var(--primary-green);
+            color: var(--white);
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: var(--dark-green);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 2;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-green);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+            color: #999;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-leaf"></i> Top Unique Uganda Ltd
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Top Unique Uganda Ltd</h1>
+        <p class="tagline">"A Culture of Excellence"</p>
+        <p>Professional Cleaning and Hygiene Services transforming spaces into clean, healthy, and safe environments since 2007</p>
+        <a href="#contact" class="btn">Get a Quote</a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Leading Cleaning Solutions in Uganda</h3>
+                    <p>Top Unique Uganda Ltd is a fully registered Ugandan company specializing in providing professional cleaning and hygiene services to residential, commercial, industrial, and institutional clients.</p>
+                    <p>Since our establishment in 2007, we have built a strong reputation for delivering reliable, high-quality, and efficient cleaning solutions. Our mission is to transform every space into a clean, healthy, and safe environment through professionalism, consistency, and high standards of service delivery.</p>
+                    <p>We achieve this through a dedicated team of well-trained, qualified, skilled, and experienced staff, using modern cleaning equipment and eco-friendly products to ensure safe and effective service delivery tailored to meet the unique needs of each client.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-calendar"></i>
+                        <h4>17+</h4>
+                        <p>Years of Excellence</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-users"></i>
+                        <h4>500+</h4>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-certificate"></i>
+                        <h4>100%</h4>
+                        <p>Professional Staff</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-award"></i>
+                        <h4>TOP</h4>
+                        <p>Quality Service</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-bug"></i>
+                    <h3>Pest Control and Fumigation</h3>
+                    <p>Professional pest elimination and fumigation services for homes and businesses using safe, effective methods.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Residential Cleaning</h3>
+                    <p>Comprehensive cleaning services for apartments, houses, and residential estates tailored to your schedule.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-building"></i>
+                    <h3>Office and Commercial Cleaning</h3>
+                    <p>Professional cleaning solutions for corporate offices, retail outlets, and shopping malls.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-hammer"></i>
+                    <h3>Post-Construction Cleaning</h3>
+                    <p>Thorough cleaning after construction or renovation projects to make your space move-in ready.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-couch"></i>
+                    <h3>Carpet and Upholstery Cleaning</h3>
+                    <p>Deep cleaning and stain removal for carpets, sofas, and upholstered furniture.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-gem"></i>
+                    <h3>Floor Polishing and Maintenance</h3>
+                    <p>Expert floor care services including polishing, sealing, and regular maintenance.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-window-maximize"></i>
+                    <h3>Window and Glass Cleaning</h3>
+                    <p>Streak-free window and glass cleaning for residential and commercial properties.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-pump-soap"></i>
+                    <h3>Sanitary Bin Management</h3>
+                    <p>Hygienic sanitary bin supply, installation, and regular collection services.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-spray-can"></i>
+                    <h3>Deep Cleaning and Disinfection</h3>
+                    <p>Comprehensive deep cleaning and disinfection services for maximum hygiene and safety.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Roofing Tiles Scrubbing</h3>
+                    <p>Professional roof cleaning and tile scrubbing to maintain your property's appearance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="container">
+            <h2 class="section-title">Our Leadership</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Allan Lwasa Kibuuka</h3>
+                    <p class="position">Director</p>
+                    <p>Leading the company with vision and commitment to excellence in service delivery.</p>
+                </div>
+                <div class="team-card">
+                    <div class="avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Okurut Lawrence</h3>
+                    <p class="position">Team Member</p>
+                    <p>Dedicated professional ensuring quality service delivery and client satisfaction.</p>
+                </div>
+                <div class="team-card">
+                    <div class="avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Docus</h3>
+                    <p class="position">Team Member</p>
+                    <p>Committed to maintaining the highest standards of cleaning and hygiene services.</p>
+                </div>
+                <div class="team-card">
+                    <div class="avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Lwanga Frank</h3>
+                    <p class="position">Team Member</p>
+                    <p>Experienced professional dedicated to exceptional service delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients" id="clients">
+        <div class="container">
+            <h2 class="section-title">Our Clients</h2>
+            <div class="clients-grid">
+                <div class="client-item">
+                    <i class="fas fa-hospital"></i>
+                    <div>
+                        <h4>The AIDS Support Organization (TASO)</h4>
+                        <p>Healthcare Institution</p>
+                    </div>
+                </div>
+                <div class="client-item">
+                    <i class="fas fa-building"></i>
+                    <div>
+                        <h4>Corporate Offices</h4>
+                        <p>Business Sector</p>
+                    </div>
+                </div>
+                <div class="client-item">
+                    <i class="fas fa-school"></i>
+                    <div>
+                        <h4>Schools and Educational Institutions</h4>
+                        <p>Education Sector</p>
+                    </div>
+                </div>
+                <div class="client-item">
+                    <i class="fas fa-hospital-alt"></i>
+                    <div>
+                        <h4>Hospitals and Clinics</h4>
+                        <p>Healthcare Sector</p>
+                    </div>
+                </div>
+                <div class="client-item">
+                    <i class="fas fa-hotel"></i>
+                    <div>
+                        <h4>Hotels and Restaurants</h4>
+                        <p>Hospitality Sector</p>
+                    </div>
+                </div>
+                <div class="client-item">
+                    <i class="fas fa-shopping-cart"></i>
+                    <div>
+                        <h4>Retail Outlets and Shopping Malls</h4>
+                        <p>Retail Sector</p>
+                    </div>
+                </div>
+                <div class="client-item">
+                    <i class="fas fa-home"></i>
+                    <div>
+                        <h4>Residential Apartments and Estates</h4>
+                        <p>Residential Sector</p>
+                    </div>
+                </div>
+                <div class="client-item">
+                    <i class="fas fa-landmark"></i>
+                    <div>
+                        <h4>NGOs and Government Institutions</h4>
+                        <p>Public Sector</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strengths Section -->
+    <section class="strengths">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="strengths-grid">
+                <div class="strength-item">
+                    <i class="fas fa-user-graduate"></i>
+                    <div>
+                        <h3>Highly Trained Staff</h3>
+                        <p>Our team consists of well-trained, qualified, skilled, and experienced professionals.</p>
+                    </div>
+                </div>
+                <div class="strength-item">
+                    <i class="fas fa-tools"></i>
+                    <div>
+                        <h3>Modern Equipment</h3>
+                        <p>We use state-of-the-art cleaning equipment for efficient and effective service delivery.</p>
+                    </div>
+                </div>
+                <div class="strength-item">
+                    <i class="fas fa-leaf"></i>
+                    <div>
+                        <h3>Eco-Friendly Products</h3>
+                        <p>We use environmentally safe and eco-friendly cleaning products for your safety.</p>
+                    </div>
+                </div>
+                <div class="strength-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3>Reliable Service</h3>
+                        <p>Consistent and dependable service delivery that you can count on.</p>
+                    </div>
+                </div>
+                <div class="strength-item">
+                    <i class="fas fa-heart"></i>
+                    <div>
+                        <h3>Customer Satisfaction</h3>
+                        <p>Strong commitment to meeting and exceeding client expectations.</p>
+                    </div>
+                </div>
+                <div class="strength-item">
+                    <i class="fas fa-user-shield"></i>
+                    <div>
+                        <h3>Professional Management</h3>
+                        <p>Expert supervision and management ensuring quality standards.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p style="margin-bottom: 2rem;">Ready to transform your space? Contact us today for a free quote and experience our culture of excellence.</p>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>KYT Building, Kawempe Division<br>Kampala, Uganda</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+256 774 223177<br>+256 706 318772</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>topuniqueugltd@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-building"></i>
+                        <div>
+                            <h4>Company Details</h4>
+                            <p>TIN: 1006956541<br>Established: 2007</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <i class="fas fa-university"></i>
+                        <div>
+                            <h4>Bank Details</h4>
+                            <p>Pear Bank (Postbank)<br>Account: 1630002000400</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Required</label>
+                            <input type="text" id="service" name="service" placeholder="e.g., Office Cleaning, Pest Control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Top Unique Uganda Ltd</h3>
+                <p>A leading professional cleaning and hygiene services company in Uganda, committed to delivering excellence since 2007.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="#home">Home</a></p>
+                <p><a href="#about">About Us</a></p>
+                <p><a href="#services">Services</a></p>
+                <p><a href="#contact">Contact</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <p><a href="#services">Residential Cleaning</a></p>
+                <p><a href="#services">Commercial Cleaning</a></p>
+                <p><a href="#services">Pest Control</a></p>
+                <p><a href="#services">Deep Cleaning</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> KYT Building, Kawempe Division, Kampala</p>
+                <p><i class="fas fa-phone"></i> +256 774 223177</p>
+                <p><i class="fas fa-envelope"></i> topuniqueugltd@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Top Unique Uganda Ltd. All Rights Reserved. | "A Culture of Excellence"</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            e.target.reset();
+        });
+
+        // Scroll animation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
